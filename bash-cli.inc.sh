@@ -192,7 +192,7 @@ function bcli_help() {
 function bcli_bash_completions() {
     local root_dir;
     root_dir=
-    root_dir=$(dirname "$(bcli_resolve_path "$(which "${COMP_WORDS[0]}")")")
+    root_dir=$(dirname "$(bcli_resolve_path "$(command -v "${COMP_WORDS[0]}")")")
 
     local curr_arg;
     curr_arg="${COMP_WORDS[COMP_CWORD]}"
